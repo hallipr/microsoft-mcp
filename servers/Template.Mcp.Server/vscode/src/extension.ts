@@ -45,7 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
         throw new Error('Unsupported platform: ' + process.platform);
     }
 
-    // Use the binary from the extension's server/os folder
+    // Use the binary from the extension's server folder
     const binPath = path.join(context.extensionPath, 'server', binary);
     if (!fs.existsSync(binPath)) {
         throw new Error(`azmcp binary not found at ${binPath}. Please ensure the server binary is present.`);
